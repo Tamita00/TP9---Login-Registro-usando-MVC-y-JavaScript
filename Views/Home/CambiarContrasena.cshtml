@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14,15 +14,14 @@
 
     <script src = "js\site.js"></script>
 
-    <form method="post" action = '@Url.Action("VerificarUsuario")'>
+    <form method="post" action = '@Url.Action("OlvidarContrasena")'>
         <p>UserName: </p><input type="text" name = "UserName"><br>
-        <p>Contraseña: </p><input type="text" name = "Contraseña"><br>
+        <p>Contraseña Nueva: </p><input type="text" name = "ContraseñaNueva"><br>
         <input type="submit" value="Subir">
     </form>
-    <a href='@Url.Action("OlvidarContrasena")'>Olvide mi Contraseña</a>
+    
     <a href='@Url.Action("Registrar")'>No tengo Cuenta</a>
 
-        
 </body>
 
 </html>

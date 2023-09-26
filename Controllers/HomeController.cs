@@ -6,22 +6,40 @@ public class HomeController : Controller
 {
     public IActionResult Index()
     {
-        
+
         return View();
     }
 
-    public IActionResult Registro()
+    
+    public IActionResult VerificarUsuario(string UserName, string Contraseña)
+    {
+        if(BD.MostrarInfo(UserName, Contraseña) == null) return View();
+        else return View("Bienvenido");
+    }
+
+    public IActionResult Bienvenido(string UserName, string Contraseña)
+    {
+        ViewBag.MostrarInfo = BD.MostrarInfo(UserName, Contraseña);
+        return View("Bienvenido");
+    }
+
+
+    
+    public IActionResult Registrar()
     {
         return View("Registro");
     }
 
-    public IActionResult OlvidarContrasena()
+[HttpPost]
+    public IActionResult GuardarUsuario(string UserName, string Contraseña, int Telefono, string Nombre, string Genero)
     {
-        return View("OlvidarContrasena");
+        BD.AgregarUsuario(UserName, Contraseña, Telefono, Nombre, Genero);
+        return RedirectToAction();
     }
 
-    public IActionResult Bienvenido()
+    public IActionResult OlvidarContrasena(string UserName, string ContraseñaNueva)
     {
-        return View("Bienvenido");
+        BD.CambiarContra( UserName, ContraseñaNueva);
+        return View();
     }
 }
