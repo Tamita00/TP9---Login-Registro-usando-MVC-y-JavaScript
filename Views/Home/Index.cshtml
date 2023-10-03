@@ -15,8 +15,9 @@
     <script src = "js\site.js"></script>
 
     <form method="post" action = '@Url.Action("VerificarUsuario")'>
-        <h3>UserName: </h3><input type="text" name = "UserName"><br>
-        <h3>Contraseña: </h3><input type="text" name = "Contraseña"><br><br>
+    <h2>Iniciar Sesión</h2>
+        <h3>UserName: </h3><input type="text" name = "UserName" required><br>
+        <h3>Contraseña: </h3><input type="text" name = "Contraseña" required><br><br>
         <input type="submit" value="Subir"><br><br><br>
     </form>
     <a href='@Url.Action("OlvidarContrasena1")'>Olvide mi Contraseña</a><br><br>

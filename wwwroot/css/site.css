@@ -6,6 +6,7 @@ html {
 
 @media (min-width: 768px) {
   html {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
   }
 }
