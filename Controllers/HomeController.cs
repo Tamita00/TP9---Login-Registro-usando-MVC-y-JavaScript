@@ -14,13 +14,10 @@ public class HomeController : Controller
     public IActionResult VerificarUsuario(string UserName, string Contraseña)
     {
         if(BD.MostrarInfo(UserName, Contraseña) == null) return View("Index");
-        else return View("Bienvenido");
-    }
-
-    public IActionResult Bienvenido(string UserName, string Contraseña)
-    {
-        ViewBag.MostrarInfo = BD.MostrarInfo(UserName, Contraseña);
-        return View("Bienvenido");
+        else{
+            ViewBag.MostrarInfo = BD.MostrarInfo(UserName, Contraseña);
+            return View("Bienvenido");
+        } 
     }
 
     public IActionResult Registrar()

@@ -10,14 +10,18 @@
     <title>TP9</title>
 </head>
 
-<body class="background">
+<body>
 
     <script src = "js\site.js"></script>
+<div class = "contenedor">
+    <p>Bienvenido @ViewBag.MostrarInfo.Nombre</p>
 
-    <p>Bienvenido</p>
+    <p>UserName: @ViewBag.MostrarInfo.UserName</p>
+    <p>Tel*: @ViewBag.MostrarInfo.Telefono</p>
+    <p>Genero: @ViewBag.MostrarInfo.Genero</p>
 
-    <a href='@Url.Action("Index")'>Cerrar Sesión</a>
-
+    <a href='@Url.Action("Index")'>Cerrar Sesión</a><br><br>
+</div>
         
 </body>
 

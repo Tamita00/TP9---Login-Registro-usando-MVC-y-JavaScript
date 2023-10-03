@@ -10,18 +10,18 @@
     <title>TP9</title>
 </head>
 
-<body class="background">
-
+<body>
+<div class = "contenedor">
     <script src = "js\site.js"></script>
 
     <form method="post" action = '@Url.Action("VerificarUsuario")'>
-        <p>UserName: </p><input type="text" name = "UserName"><br>
-        <p>Contraseña: </p><input type="text" name = "Contraseña"><br>
-        <input type="submit" value="Subir">
+        <h3>UserName: </h3><input type="text" name = "UserName"><br>
+        <h3>Contraseña: </h3><input type="text" name = "Contraseña"><br><br>
+        <input type="submit" value="Subir"><br><br><br>
     </form>
-    <a href='@Url.Action("OlvidarContrasena1")'>Olvide mi Contraseña</a><br>
-    <a href='@Url.Action("Registrar")'>No tengo Cuenta</a>
-
+    <a href='@Url.Action("OlvidarContrasena1")'>Olvide mi Contraseña</a><br><br>
+    <a href='@Url.Action("Registrar")'>No tengo Cuenta</a><br><br>
+</div>
         
 </body>
 
