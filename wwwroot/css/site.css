@@ -12,10 +12,33 @@ html {
 
 body {
   margin: 20px 60px 0px 20px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 
-footer {
-  position: fixed; 
-  bottom: 0; 
-  margin: 10px 0px 20px 0px;
+.contenedor {
+  background-color: rgb(243, 245, 245);
+  border: solid rgb(97, 96, 96) 2px;
+  border-radius: 3px;
+  margin-right: 700px;
+  margin-left: 700px;
+}
+
+a:link, a:visited {
+  
+  background-color: rgb(243, 245, 245);
+  border: solid rgb(97, 96, 96) 2px;
+  border-radius: 3px;
+  color: rgb(44, 44, 44);
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: rgb(211, 214, 214);
+  border: solid rgb(97, 96, 96) 2px;
+  border-radius: 3px;
 }

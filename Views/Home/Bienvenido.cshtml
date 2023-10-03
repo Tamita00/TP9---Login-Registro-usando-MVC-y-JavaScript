@@ -14,14 +14,15 @@
 
     <script src = "js\site.js"></script>
 <div class = "contenedor">
-    <form method="post" action = '@Url.Action("OlvidarContrasena2")'>
-        <h3>UserName: </h3><input type="text" name = "UserName"><br>
-        <h3>Contraseña Nueva: </h3><input type="text" name = "ContraseñaNueva"><br>
-        <input type="submit" value="Subir"><br><br>
-    </form>
-    
-    <a href='@Url.Action("Registrar")'>No tengo Cuenta</a><br><br>
+    <p>Bienvenido @ViewBag.MostrarInfo.Nombre</p>
+
+    <p>UserName: @ViewBag.MostrarInfo.UserName</p>
+    <p>Tel*: @ViewBag.MostrarInfo.Telefono</p>
+    <p>Genero: @ViewBag.MostrarInfo.Genero</p>
+
+    <a href='@Url.Action("Index")'>Cerrar Sesión</a><br><br>
 </div>
+        
 </body>
 
 </html>
