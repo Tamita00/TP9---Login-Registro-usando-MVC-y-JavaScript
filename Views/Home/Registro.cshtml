@@ -6,19 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Style.css">
-    <link rel="stylesheet">
     <title>TP9</title>
 </head>
 
 <body>
 
-    <script src = "js\site.js"></script>
 <div class = "contenedor">
-    <form method="post" action = '@Url.Action("GuardarUsuario")'>
+    <form method="post" action = '@Url.Action("GuardarUsuario")' onsubmit = "return EsValida()">
     <h2>Registrar</h2>
-        <p>UserName: </p><input type="text" name = "UserName"required><br>
-        <p>Contraseña: </p><input type="text" name = "Contraseña" required><br>
-        <p>Nombre: </p><input type="text" name = "Nombre" ><br>
+        <p>UserName: </p><input type="text" name = "UserName" required><br>
+        <p>Contraseña: </p><input type="text" id = "password" name = "Contraseña" required><br>
+        <p>Nombre: </p><input type="text" name = "Nombre"><br>
         <p>Telefono: </p><input type="text" name = "Telefono"><br>
         <p>Genero: </p><input type="text" name = "Genero"><br><br>
         <input type="submit" value="Subir"><br><br>
