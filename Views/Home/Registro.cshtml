@@ -14,9 +14,9 @@
 
     <script src = "js\site.js"></script>
 
-    <form method="post" action = '@Url.Action("GuardarUsuario")'>
+    <form method="post" action = '@Url.Action("GuardarUsuario")' onsubmit = "return Esvalido()">
         <p>UserName: </p><input type="text" name = "UserName"><br>
-        <p>Contraseña: </p><input type="text" name = "Contraseña"><br>
+        <p id = "password">Contraseña: </p><input type="text" name = "Contraseña"><br>
         <p>Nombre: </p><input type="text" name = "Nombre"><br>
         <p>Telefono: </p><input type="text" name = "Telefono"><br>
         <p>Genero: </p><input type="text" name = "Genero"><br>
