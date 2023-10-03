@@ -7,13 +7,13 @@ public class HomeController : Controller
     public IActionResult Index()
     {
 
-        return View();
+        return View("Index");
     }
 
     
     public IActionResult VerificarUsuario(string UserName, string Contraseña)
     {
-        if(BD.MostrarInfo(UserName, Contraseña) == null) return View();
+        if(BD.MostrarInfo(UserName, Contraseña) == null) return View("Index");
         else return View("Bienvenido");
     }
 
@@ -23,23 +23,28 @@ public class HomeController : Controller
         return View("Bienvenido");
     }
 
-
-    
     public IActionResult Registrar()
     {
         return View("Registro");
     }
 
 [HttpPost]
+
     public IActionResult GuardarUsuario(string UserName, string Contraseña, int Telefono, string Nombre, string Genero)
     {
         BD.AgregarUsuario(UserName, Contraseña, Telefono, Nombre, Genero);
-        return RedirectToAction();
+        return View("Index");
     }
 
-    public IActionResult OlvidarContrasena(string UserName, string ContraseñaNueva)
+    public IActionResult OlvidarContrasena1()
+    {
+        
+        return View("CambiarContrasena");
+    }
+
+    public IActionResult OlvidarContrasena2(string UserName, string ContraseñaNueva)
     {
         BD.CambiarContra( UserName, ContraseñaNueva);
-        return View();
+        return View("Index");
     }
 }
